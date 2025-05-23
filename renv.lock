@@ -3,12 +3,12 @@
     "Version": "4.5.0",
     "Repositories": [
       {
-        "Name": "P3M",
-        "URL": "https://packagemanager.posit.co/cran/latest"
-      },
-      {
         "Name": "CRAN",
         "URL": "https://cloud.r-project.org"
+      },
+      {
+        "Name": "pik",
+        "URL": "https://rse.pik-potsdam.de/r/packages"
       }
     ]
   },
@@ -484,13 +484,12 @@
     "lpjmlkit": {
       "Package": "lpjmlkit",
       "Version": "1.7.9",
-      "Source": "Local",
+      "Source": "Repository",
       "Type": "Package",
       "Title": "Toolkit for Basic LPJmL Handling",
       "Authors@R": "c( person(\"Jannes\", \"Breier\", , \"jannesbr@pik-potsdam.de\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0002-9055-6904\")), person(\"Sebastian\",\"Ostberg\", , \"ostberg@pik-potsdam.de\", role = \"aut\", comment = c(ORCID = \"0000-0002-2368-7015\")), person(\"Stephen Björn\", \"Wirth\", , \"wirth@pik-potsdam.de\", role = \"aut\", comment = c(ORCID = \"0000-0003-3090-3318\")), person(\"Sara\",\"Minoli\", , \"minoli@pik-potsdam.de\", role = \"aut\", comment = c(ORCID = \"0000-0001-7920-3107\")), person(\"Fabian\", \"Stenzel\", , \"stenzel@pik-potsdam.de\", role = \"aut\", comment = c(ORCID = \"0000-0002-5109-0048\")), person(\"David\",\"Hötten\", , \"davidho@pik-potsdam.de\", role = c(\"aut\")), person(\"Christoph\", \"Müller\", , \"cmueller@pik-potsdam.de\", role = \"aut\", comment = c(ORCID = \"0000-0002-9491-3550\")) )",
       "Description": "A collection of basic functions to facilitate the work with the Dynamic Global Vegetation Model (DGVM) Lund-Potsdam-Jena managed Land (LPJmL) hosted at the Potsdam Institute for Climate Impact Research (PIK). It provides functions for performing LPJmL simulations, as well as reading, processing and writing model-related data such as inputs and outputs or configuration files.",
       "License": "AGPL-3",
-      "LazyData": "true",
       "RoxygenNote": "7.3.2",
       "Roxygen": "list(markdown = TRUE, r6 = TRUE)",
       "Encoding": "UTF-8",
@@ -530,10 +529,13 @@
       "Config/testthat/edition": "3",
       "VignetteBuilder": "knitr",
       "Date": "2025-04-02",
-      "Author": "Jannes Breier [aut, cre] (ORCID: <https://orcid.org/0000-0002-9055-6904>), Sebastian Ostberg [aut] (ORCID: <https://orcid.org/0000-0002-2368-7015>), Stephen Björn Wirth [aut] (ORCID: <https://orcid.org/0000-0003-3090-3318>), Sara Minoli [aut] (ORCID: <https://orcid.org/0000-0001-7920-3107>), Fabian Stenzel [aut] (ORCID: <https://orcid.org/0000-0002-5109-0048>), David Hötten [aut], Christoph Müller [aut] (ORCID: <https://orcid.org/0000-0002-9491-3550>)",
-      "Maintainer": "Jannes Breier <jannesbr@pik-potsdam.de>",
-      "RemoteType": "local",
-      "RemoteUrl": "~/lpjmlkit"
+      "Repository": "https://rse.pik-potsdam.de/r/packages",
+      "RemoteUrl": "https://github.com/PIK-LPJmL/lpjmlkit",
+      "RemoteRef": "HEAD",
+      "RemoteSha": "9c248884a60bb77794c064057f9f10249eb6576b",
+      "NeedsCompilation": "no",
+      "Author": "Jannes Breier [aut, cre] (<https://orcid.org/0000-0002-9055-6904>), Sebastian Ostberg [aut] (<https://orcid.org/0000-0002-2368-7015>), Stephen Björn Wirth [aut] (<https://orcid.org/0000-0003-3090-3318>), Sara Minoli [aut] (<https://orcid.org/0000-0001-7920-3107>), Fabian Stenzel [aut] (<https://orcid.org/0000-0002-5109-0048>), David Hötten [aut], Christoph Müller [aut] (<https://orcid.org/0000-0002-9491-3550>)",
+      "Maintainer": "Jannes Breier <jannesbr@pik-potsdam.de>"
     },
     "magrittr": {
       "Package": "magrittr",
@@ -860,6 +862,50 @@
       "License_is_FOSS": "yes",
       "Repository": "CRAN"
     },
+    "stringr": {
+      "Package": "stringr",
+      "Version": "1.5.1",
+      "Source": "Repository",
+      "Title": "Simple, Consistent Wrappers for Common String Operations",
+      "Authors@R": "c( person(\"Hadley\", \"Wickham\", , \"hadley@posit.co\", role = c(\"aut\", \"cre\", \"cph\")), person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\")) )",
+      "Description": "A consistent, simple and easy to use set of wrappers around the fantastic 'stringi' package. All function and argument names (and positions) are consistent, all functions deal with \"NA\"'s and zero length vectors in the same way, and the output from one function is easy to feed into the input of another.",
+      "License": "MIT + file LICENSE",
+      "URL": "https://stringr.tidyverse.org, https://github.com/tidyverse/stringr",
+      "BugReports": "https://github.com/tidyverse/stringr/issues",
+      "Depends": [
+        "R (>= 3.6)"
+      ],
+      "Imports": [
+        "cli",
+        "glue (>= 1.6.1)",
+        "lifecycle (>= 1.0.3)",
+        "magrittr",
+        "rlang (>= 1.0.0)",
+        "stringi (>= 1.5.3)",
+        "vctrs (>= 0.4.0)"
+      ],
+      "Suggests": [
+        "covr",
+        "dplyr",
+        "gt",
+        "htmltools",
+        "htmlwidgets",
+        "knitr",
+        "rmarkdown",
+        "testthat (>= 3.0.0)",
+        "tibble"
+      ],
+      "VignetteBuilder": "knitr",
+      "Config/Needs/website": "tidyverse/tidytemplate",
+      "Config/testthat/edition": "3",
+      "Encoding": "UTF-8",
+      "LazyData": "true",
+      "RoxygenNote": "7.2.3",
+      "NeedsCompilation": "no",
+      "Author": "Hadley Wickham [aut, cre, cph], Posit Software, PBC [cph, fnd]",
+      "Maintainer": "Hadley Wickham <hadley@posit.co>",
+      "Repository": "CRAN"
+    },
     "terra": {
       "Package": "terra",
       "Version": "1.8-50",
@@ -899,7 +945,7 @@
       "Authors@R": "c( person(\"Robert J.\", \"Hijmans\", role=c(\"cre\", \"aut\"),   email=\"r.hijmans@gmail.com\", comment=c(ORCID=\"0000-0001-5872-2872\")),\t\t\t person(\"Márcia\", \"Barbosa\", role=\"ctb\"), person(\"Roger\", \"Bivand\", role=\"ctb\", comment=c(ORCID=\"0000-0003-2392-6140\")), person(\"Andrew\", \"Brown\", role=\"ctb\"), person(\"Michael\", \"Chirico\", role=\"ctb\"), person(\"Emanuele\", \"Cordano\", role=\"ctb\",comment=c(ORCID=\"0000-0002-3508-5898\")), person(\"Krzysztof\", \"Dyba\", role=\"ctb\", comment=c(ORCID=\"0000-0002-8614-3816\")), person(\"Edzer\", \"Pebesma\", role=\"ctb\", comment=c(ORCID=\"0000-0001-8049-7069\")), person(\"Barry\", \"Rowlingson\", role=\"ctb\"), person(\"Michael D.\", \"Sumner\", role=\"ctb\"))",
       "NeedsCompilation": "yes",
       "Author": "Robert J. Hijmans [cre, aut] (ORCID: <https://orcid.org/0000-0001-5872-2872>), Márcia Barbosa [ctb], Roger Bivand [ctb] (ORCID: <https://orcid.org/0000-0003-2392-6140>), Andrew Brown [ctb], Michael Chirico [ctb], Emanuele Cordano [ctb] (ORCID: <https://orcid.org/0000-0002-3508-5898>), Krzysztof Dyba [ctb] (ORCID: <https://orcid.org/0000-0002-8614-3816>), Edzer Pebesma [ctb] (ORCID: <https://orcid.org/0000-0001-8049-7069>), Barry Rowlingson [ctb], Michael D. Sumner [ctb]",
-      "Repository": "P3M"
+      "Repository": "RSPM"
     },
     "tibble": {
       "Package": "tibble",
