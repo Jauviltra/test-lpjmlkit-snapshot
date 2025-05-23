@@ -7,7 +7,7 @@ This requires a UNIX operating system (For starters, an Ubuntu Linux will do).
     in your home folder, in a folder called LPJmL:
     ```bash
     cd
-    git clone https://github.com/PIK-LPJmL/LPJmL.git
+    git clone https://github.com/lbm364dl/test-lpjmlkit
     cd LPJmL
     ```
     From inside its folder (you should already be if you followed previous
