@@ -25,7 +25,8 @@ Anyway, please refer to the previous guide if something goes wrong.
     dependencies. For that, run the following command to install them (at
     least these were the ones I needed):
     ```bash
-    sudo apt-get install libjson-c-dev libnetcdf-dev libudunits2-dev
+    sudo apt-get update
+    sudo apt-get install build-essential libjson-c-dev libnetcdf-dev libudunits2-dev
     ```
     From inside the model's folder (you should already be if you followed
     previous commands), you now need to run these commands in order to install
@@ -97,8 +98,14 @@ Anyway, please refer to the previous guide if something goes wrong.
     ```bash
     sudo apt-get install gdal-bin libgdal-dev
     ```
-    Now, you can open your R session in this folder with the command
+    You can now go into this repository's folder. If you haven't done it yet,
+    you should clone this repository:
     ```bash
+    git clone https://github.com/lbm364dl/test-lpjmlkit
+    ```
+    Now, you can open your R session in this folder with the commands:
+    ```bash
+    cd ~/test-lpjmlkit
     R
     ```
     You can now just do `renv::restore()` and you should be ready. If you
@@ -115,10 +122,14 @@ Anyway, please refer to the previous guide if something goes wrong.
     ```r
     source("lpjmlkit.R")
     ```
-    If you are on WSL and you want to use Rstudio, you can't easily use the
-    Rstudio Desktop installed on your Windows. Instead, you should install
-    another one in WSL itself:
+    You should get an error here if you haven't set your custom path for the
+    LPJmL model in the `lpjmlkit.R` file. There are ways to edit files inside
+    the terminal, but if you like using Rstudio, it would make sense to have
+    it here too. If you are on WSL and you want to use Rstudio, you can't
+    easily use the Rstudio Desktop installed on your Windows. Instead, you
+    should install another one in WSL itself:
     ```bash
+    sudo apt-get install libasound2-dev
     curl -o rstudio.deb https://download1.rstudio.org/electron/jammy/amd64/rstudio-2025.05.0-496-amd64.deb
     sudo dpkg -i rstudio.deb
     sudo apt-get -f install
