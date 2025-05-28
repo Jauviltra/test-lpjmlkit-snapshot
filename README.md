@@ -3,8 +3,11 @@ If you are on Windows, you can also use WSL (Windows Subsystem for Linux).
 I don't explain here how to install it, but you can follow the official
 [Microsoft guide](https://learn.microsoft.com/en-us/windows/wsl/install).
 It seems now this should be as easy as opening a Windows terminal as admin
-and running the command `wsl --install`, but refer to the previous guide if
-something goes wrong.
+and running the command 
+```
+wsl --install
+```
+Anyway, please refer to the previous guide if something goes wrong.
 
 1. You will need a local LPJmL model installation. You can clone from the
     [official LPJmL repository](https://github.com/PIK-LPJmL/LPJmL) or from
