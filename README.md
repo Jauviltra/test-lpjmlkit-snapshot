@@ -123,7 +123,7 @@ I don't explain here how to install it, but you can follow the official
     if you search apps. The name should be something like
     `Rstudio (Ubuntu-24.04)`, as opposed to the usual `Rstudio` (if you also
     had it installed on Windows). From here on, you are probably safe to just
-    open that, since Rstudio's terminal will be default also be the WSL
+    open that, since Rstudio's terminal will by default also be the WSL
     terminal there.
 
 7. The outputs of the model can also be customized. I haven't done this yet, but
