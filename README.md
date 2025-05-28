@@ -16,7 +16,7 @@ I don't explain here how to install it, but you can follow the official
     Before installing the model, you might need some operating system
     dependencies. For that, run the following command to install them (at
     least these were the ones I needed):
-    ```
+    ```bash
     sudo apt-get install libjson-c-dev libnetcdf-dev libudunits2-dev
     ```
     From inside the model's folder (you should already be if you followed
@@ -67,14 +67,14 @@ I don't explain here how to install it, but you can follow the official
     which allows an easy installation of new versions and also switching
     between them if needed. It can be installed with these commands (copied
     from the previous link):
-    ```
-    `which sudo` curl -L https://rig.r-pkg.org/deb/rig.gpg -o /etc/apt/trusted.gpg.d/rig.gpg
-    `which sudo` sh -c 'echo "deb http://rig.r-pkg.org/deb rig main" > /etc/apt/sources.list.d/rig.list'
-    `which sudo` apt update
-    `which sudo` apt install r-rig
+    ```bash
+    sudo curl -L https://rig.r-pkg.org/deb/rig.gpg -o /etc/apt/trusted.gpg.d/rig.gpg
+    sudo sh -c 'echo "deb http://rig.r-pkg.org/deb rig main" > /etc/apt/sources.list.d/rig.list'
+    sudo apt update
+    sudo apt install r-rig
     ```
     Now installing the latest R version is as easy as this:
-    ```
+    ```bash
     rig add release
     ```
     If you realized this tool is extremely useful, you can learn more from
@@ -97,7 +97,6 @@ I don't explain here how to install it, but you can follow the official
     don't know about using `renv` you can check
     [my guide](https://eduaguilera.github.io/WHEP/articles/workflow-intro.html#virtual-environments-with-renv).
 
-
 6. The code to run the model using the `lpjmlkit` package and get an idea of
     how to configure it further to your needs is found in `lpjmlkit.R`. It
     takes as default config the one found in the LPJmL model folder in
@@ -105,7 +104,7 @@ I don't explain here how to install it, but you can follow the official
     files paths (if you cloned my fork instead of the official one). This
     default config can be overwritten, and examples can be seen in
     `lpjmlkit.R`. From the R session, you can run by doing
-    ```
+    ```r
     source("lpjmlkit.R")
     ```
     If you are on WSL and you want to use Rstudio, you can't easily use the
