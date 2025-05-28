@@ -9,6 +9,8 @@ wsl --install
 ```
 Anyway, please refer to the previous guide if something goes wrong.
 
+## LPJmL model installation and usage
+
 1. You will need a local LPJmL model installation. You can clone from the
     [official LPJmL repository](https://github.com/PIK-LPJmL/LPJmL) or from
     [my fork](https://github.com/lbm364dl/LPJmL) (which has some custom config
