@@ -39,11 +39,10 @@ Anyway, please refer to the previous guide if something goes wrong.
 2. You will also need the inputs for the model. For now the basic inputs
     can be downloaded from
     [here](https://saco.csic.es/s/nrJ3JGPZyZeQMW8?path=%2FData).
-    You have to download the `LPJmL5-real-inputs` folder (you should get a
-    `LPJmL5-real-inputs.zip` file download) and add it as a subfolder called
-    `inputs` inside the `LPJmL` model folder you got in previous step. After
-    downloading, you can do this from the terminal. First make sure you have
-    `unzip` installed:
+    You have to download the `LPJmL5-real-inputs.zip` file, extract it and
+    add it as a subfolder called `inputs` inside the `LPJmL` model folder you
+    got in previous step. After downloading, you can do this from the terminal.
+    First make sure you have `unzip` installed:
     ```bash
     sudo apt-get install unzip
     ```
