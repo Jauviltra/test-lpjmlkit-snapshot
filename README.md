@@ -49,13 +49,13 @@ Anyway, please refer to the previous guide if something goes wrong.
     ```
     You can now use this command if you are on Linux:
     ```bash
-    unzip ~/Downloads/LPJmL5-real-inputs.zip -d ~/LPJmL/ && mv LPJmL5-real-inputs inputs
+    unzip ~/Downloads/LPJmL5-real-inputs.zip -d ~/LPJmL/inputs
     ```
     If you are on WSL, you can also get the zip downloaded on Windows directly
     to Linux (note the place we get the file from in the command, change
     username to your user in Windows):
     ```bash
-    unzip /mnt/c/Users/username/Downloads/LPJmL5-real-inputs.zip -d ~/LPJmL/ && mv LPJmL5-real-inputs inputs
+    unzip /mnt/c/Users/username/Downloads/LPJmL5-real-inputs.zip -d ~/LPJmL/inputs
     ```
     In the previous command, if you don't know your Windows username you can
     find it by using the command
@@ -101,6 +101,7 @@ Anyway, please refer to the previous guide if something goes wrong.
     You can now go into this repository's folder. If you haven't done it yet,
     you should clone this repository:
     ```bash
+    cd
     git clone https://github.com/lbm364dl/test-lpjmlkit
     ```
     Now, you can open your R session in this folder with the commands:
@@ -127,7 +128,10 @@ Anyway, please refer to the previous guide if something goes wrong.
     the terminal, but if you like using Rstudio, it would make sense to have
     it here too. If you are on WSL and you want to use Rstudio, you can't
     easily use the Rstudio Desktop installed on your Windows. Instead, you
-    should install another one in WSL itself:
+    should install another one in WSL itself. First, if you were still inside
+    the R session, you can leave it by writing `quit()` and choosing not to
+    save your session. Now you should be again in Bash (the Linux terminal).
+    To install Rstudio here, use these commands:
     ```bash
     sudo apt-get install libasound2-dev
     curl -o rstudio.deb https://download1.rstudio.org/electron/jammy/amd64/rstudio-2025.05.0-496-amd64.deb
