@@ -7,7 +7,12 @@ and running the command
 ```
 wsl --install
 ```
-Anyway, please refer to the previous guide if something goes wrong.
+In any case, please refer to the previous guide if something goes wrong.
+In particular, if your computer doesn't have virtualization enabled by
+default, you might struggle installing WSL. You should enable this
+virtualization for it to work. This [Microsoft link](
+https://support.microsoft.com/en-us/windows/enable-virtualization-on-windows-c5578302-6e43-4b4b-a449-8ced115f58e1
+) might be a good start on how to do it.
 
 ## LPJmL model installation and usage
 
