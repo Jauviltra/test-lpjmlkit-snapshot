@@ -1,6 +1,9 @@
+
+library(testthat)
+
 # Change these paths for your computer
-model_path <- "/home/catalin/LPJmL"
-sim_path <- "/home/catalin/LPJmL/simulation"
+model_path <- "/home/jvt/LPJmL"
+sim_path <- "/home/jvt/LPJmL/simulation"
 
 # Running only for a subset of cells, change to NA to run all cells
 # Actually NA means to use default values in `lpjml_config.cjson`
@@ -9,7 +12,7 @@ endgrid <- 27433
 
 # Adapt to the number of CPU cores of your computer
 # If you get an error message about cores when running, try to reduce them
-use_cores <- 4
+use_cores <- 1
 
 # Actual simulation year ranges (after the spinup)
 simulation_start_year <- 1901
@@ -33,8 +36,11 @@ spinup_params <- tibble::tibble(
 spinup_config_details <- lpjmlkit::write_config(
   x = spinup_params,
   model_path = model_path,
-  sim_path = sim_path
+  sim_path = sim_path,
+  debug = TRUE
 )
+
+
 
 # Actual simulation scenarios after spinup. Tibble can have multiple rows,
 # one for each scenario to simulate. It uses the `-DFROM_RESTART` macro
@@ -55,7 +61,8 @@ simulation_params <- tibble::tibble(
 simulation_config_details <- lpjmlkit::write_config(
   x = simulation_params,
   model_path = model_path,
-  sim_path = sim_path
+  sim_path = sim_path,
+  debug = TRUE
 )
 
 # Previous was just setting up configuration, now actually running the model
@@ -75,3 +82,5 @@ simulation_run_details <- lpjmlkit::run_lpjml(
   sim_path,
   run_cmd = stringr::str_glue("mpirun -np {use_cores} ")
 )
+
+
