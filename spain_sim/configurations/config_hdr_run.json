@@ -11605,7 +11605,7 @@
     "oil crops rapeseed",
     "sugarcane"
   ],
-  "inpath": "/home/jvt/test-lpjmlkit/lpjm_inputs_spain",
+  "inpath": "./lpjm_inputs_spain",
   "input": {
     "temp": {
       "fmt": "cdf",
@@ -15215,7 +15215,7 @@
       "id": "globalflux",
       "file": {
         "fmt": "txt",
-        "name": "/home/jvt/test-lpjmlkit/spain_sim/output/spain_test/globalflux_spinup.csv"
+        "name": "./spain_sim/output/spain_test/globalflux_spinup.csv"
       }
     }
   ],
@@ -15226,10 +15226,10 @@
   "restart": false,
   "outputyear": 1901,
   "write_restart": true,
-  "write_restart_filename": "/home/jvt/test-lpjmlkit/spain_sim/restart/spain_test/restart.lpj",
+  "write_restart_filename": "./spain_sim/restart/spain_test/restart.lpj",
   "restart_year": 1901,
   "sim_githash": "https://github.com/lbm364dl/LPJmL/tree/a9e653c06fb91ac5cf37d8d53aadc4d043e39cea",
-  "gridfile": "/home/jvt/test-lpjmlkit/data/spain_final_clm.hdr",
+  "gridfile": "./data/spain_final_clm.hdr",
   "simulation": {},
   "startgrid": 32180,
   "endgrid": 32529
