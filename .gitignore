@@ -1,4 +1,16 @@
-.Rproj.user
+# Large inputs / generated
+lpjm_inputs_spain/
+spain_sim/output/
+output/
+# NetCDFs and large binaries
+*.bin
+*.nc*
+*.nc4
+# logs and temporary files
+run_*.log
+*.log
+restores_backup/
+rawToChar
+# R env / cache
+renv/library/
 .Rhistory
-.RData
-.Ruserdata
