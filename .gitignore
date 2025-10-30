@@ -1,16 +1,37 @@
-# Large inputs / generated
-lpjm_inputs_spain/
+# R / RStudio
+.Rhistory
+.RData
+.Ruserdata
+
+# renv
+renv/library/
+renv/cache/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+
+# Local build / run artifacts
+*.log
+run.log
+smoke.log
+
+# Snapshot helpers and backups
+*.bak
+spain_sim/configurations.bak/
+spain_sim/configurations/*.bak
+
+# Temporary verification clone
+test-lpjmlkit-verify/
+
+# LPJmL binaries / large local dirs
+lpjml
+LPJmL/
+
+# outputs
 spain_sim/output/
 output/
-# NetCDFs and large binaries
-*.bin
-*.nc*
-*.nc4
-# logs and temporary files
-run_*.log
-*.log
-restores_backup/
-rawToChar
-# R env / cache
-renv/library/
-.Rhistory
+spain_sim/outputs/
+spain_sim/restart/
+tmp/
